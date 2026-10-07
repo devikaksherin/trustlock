@@ -1,16 +1,86 @@
-# React + Vite
+# 🔐 TRUSTLOCK — AI-Powered Trust & Risk Verification System
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+TRUSTLOCK is an AI-powered security system designed to detect potentially risky digital interactions and determine whether an action should be **Allowed, Verified, or Blocked**.
 
-Currently, two official plugins are available:
+The system analyzes multiple signals such as **identity, behavior, context, transactions, documents, and media evidence** to calculate a risk level. When additional verification is required, TRUSTLOCK performs a step-up verification process using available visual and audio evidence.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+TRUSTLOCK also includes a **Trust Profile** system that learns and stores a user's normal behavior, trusted contacts, usual devices, locations, active hours, transaction patterns, and other contextual information. This baseline can be used to identify unusual or suspicious activity.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚨 Problem Statement
 
-## Expanding the Oxlint configuration
+Digital scams and fraudulent activities are becoming increasingly sophisticated.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Traditional security systems often rely on simple rules such as:
+
+- Password verification
+- OTP verification
+- Static blacklists
+- Fixed transaction limits
+
+These approaches may not be sufficient when an attacker uses a legitimate account, device, or communication channel.
+
+TRUSTLOCK aims to provide an additional **risk-aware security layer** by analyzing the context and behavior surrounding an action rather than relying on a single security signal.
+
+---
+
+## 💡 Our Solution
+
+TRUSTLOCK evaluates an action using multiple security signals and produces a risk-based decision.
+
+### Decision Levels
+
+| Decision | Meaning |
+|---|---|
+| 🟢 **ALLOW** | The action appears safe and can proceed |
+| 🟡 **VERIFY** | Additional verification is required |
+| 🔴 **BLOCK** | The action is considered high-risk and should be stopped |
+
+The system can combine multiple signals before making the final decision.
+
+---
+
+# 🧠 Key Features
+
+## 1. 🔍 Multi-Signal Risk Analysis
+
+TRUSTLOCK analyzes different categories of evidence:
+
+- Identity
+- Transaction behavior
+- User context
+- Device information
+- Behavioral patterns
+- Documents
+- Media evidence
+
+These signals are combined to produce a risk assessment.
+
+---
+
+## 2. 👤 Trust Profiles
+
+TRUSTLOCK allows users to create and maintain a personal **Trust Profile**.
+
+A Trust Profile can contain information about:
+
+- User identity
+- Trusted contacts
+- Trusted issuers
+- Usual devices
+- Usual locations
+- Normal active hours
+- Communication channels
+- Typical transaction amounts
+- Frequently used payees
+- Transaction patterns
+
+The stored profile acts as a baseline for identifying unusual activity.
+
+### Example
+
+If a user normally performs transactions between:
+
+```text
+₹500 – ₹5,000
