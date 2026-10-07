@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+Pillow
+opencv-python-headless<5
+numpy
+pypdf
+mutagen
+filetype
+pytest
+httpx
