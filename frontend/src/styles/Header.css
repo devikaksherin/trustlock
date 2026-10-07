@@ -1,0 +1,130 @@
+.header {
+  height: var(--header-h);
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: 3px; /* account for body::before */
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  gap: var(--space-6);
+  height: 100%;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  padding: 0 4px;
+}
+
+.nav-link:hover {
+  color: var(--brand);
+}
+
+.nav-link.active {
+  border-bottom-color: var(--ink);
+  color: var(--ink);
+}
+
+.bottom-tabbar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  z-index: 100;
+}
+
+.offline-banner {
+  background: var(--sheet);
+  border-bottom: 1px solid var(--rule);
+  padding: var(--space-3) 0;
+  color: var(--block-text);
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.banner-cmd {
+  font-size: 11px;
+  background: color-mix(in srgb, var(--ink) 5%, transparent);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+  display: inline-block;
+  color: var(--ink);
+}
+
+.banner-btn {
+  border-color: var(--block);
+  color: var(--block-text);
+}
+
+@media (max-width: 720px) {
+  .header-nav {
+    display: none;
+  }
+  
+  .bottom-tabbar {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .tab-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    flex: 1;
+    color: var(--ink-3);
+    text-decoration: none;
+    gap: 4px;
+  }
+  
+  .tab-link.active {
+    color: var(--brand);
+  }
+  
+  .tab-label {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  
+  .banner-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .banner-btn {
+    align-self: flex-end;
+  }
+}

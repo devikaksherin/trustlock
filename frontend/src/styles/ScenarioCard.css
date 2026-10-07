@@ -1,0 +1,44 @@
+.scenario-card {
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scenario-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--ink) 5%, transparent);
+}
+
+.scenario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.scenario-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.featured-badge {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  background: var(--brand);
+  color: var(--sheet);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.scenario-narrative {
+  color: var(--ink-2);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}

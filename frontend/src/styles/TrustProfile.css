@@ -1,0 +1,105 @@
+.trust-profile-page .profile-card {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--paper);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.trust-profile-page .profile-card:hover {
+  border-color: var(--ink-3);
+}
+
+.trust-profile-page .profile-card.active {
+  border-color: var(--primary);
+  background: var(--paper-2);
+}
+
+.profile-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.editor-section h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.editor-section .hint {
+  font-size: 13px;
+  color: var(--ink-2);
+  margin-top: -8px;
+  margin-bottom: 12px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: var(--ink-2);
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.form-group.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.form-group.checkbox input {
+  margin: 0;
+}
+
+.pattern-card {
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+}
+
+.pattern-card input[type="text"],
+.pattern-card input[type="number"] {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+}
+
+.pattern-card input:focus {
+  outline: none;
+  border-color: var(--primary);
+}

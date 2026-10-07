@@ -1,0 +1,58 @@
+.provenance-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.provenance-badge.measured {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.provenance-badge.user_supplied {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.provenance-badge.simulated {
+  background: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 4px,
+    color-mix(in srgb, var(--ink) 16%, transparent) 4px,
+    color-mix(in srgb, var(--ink) 16%, transparent) 8px
+  );
+  color: var(--ink);
+  border: 1px dashed var(--ink);
+}
+
+.provenance-badge.profile {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-left: 4px solid var(--ink);
+}
+
+.provenance-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.provenance-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.provenance-hint {
+  font-size: 12px;
+  color: var(--ink-3);
+}

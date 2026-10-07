@@ -1,0 +1,63 @@
+.evidence-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--sheet);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.evidence-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: color-mix(in srgb, var(--ink) 5%, transparent);
+  border-radius: 4px;
+  color: var(--ink-2);
+}
+
+.evidence-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.evidence-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.evidence-name {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.evidence-size {
+  font-size: 12px;
+  color: var(--ink-3);
+  flex-shrink: 0;
+  margin-left: var(--space-2);
+}
+
+.evidence-meta {
+  display: flex;
+  gap: var(--space-3);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.meta-item.hash {
+  font-family: var(--font-mono);
+}

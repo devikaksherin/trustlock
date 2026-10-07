@@ -1,0 +1,48 @@
+.stamp-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-3deg);
+  mix-blend-mode: multiply;
+}
+
+.stamp-caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.stamp {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  border: 3px solid;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.stamp-container.animate {
+  animation: stamp-press 280ms var(--ease) forwards;
+}
+
+@keyframes stamp-press {
+  0% {
+    transform: scale(1.35) rotate(-3deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(-3deg);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stamp-container.animate {
+    animation: none;
+    transform: rotate(-3deg);
+    opacity: 1;
+  }
+}

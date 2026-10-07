@@ -1,0 +1,51 @@
+.evidence-dropzone {
+  border: 2px dashed var(--rule);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--sheet);
+}
+
+.evidence-dropzone:hover,
+.evidence-dropzone.drag-over {
+  border-color: var(--brand);
+  background: color-mix(in srgb, var(--brand) 5%, transparent);
+}
+
+.evidence-dropzone.uploading {
+  pointer-events: none;
+  border-style: solid;
+}
+
+.dropzone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--ink-2);
+}
+
+.upload-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--ink-2);
+}
+
+.progress-bar {
+  width: 100%;
+  max-width: 200px;
+  height: 4px;
+  background: var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--brand);
+  transition: width 0.2s ease;
+}

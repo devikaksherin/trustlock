@@ -1,0 +1,55 @@
+.case-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.section-title {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+  font-size: 18px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: var(--space-2);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-field.checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.field-label {
+  font-size: 14px;
+  color: var(--ink-2);
+  text-transform: capitalize;
+}
+
+.form-field input[type="text"],
+.form-field input[type="number"] {
+  padding: 8px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 14px;
+  background: var(--sheet);
+  color: var(--ink);
+}
+
+.form-field input[type="text"]:focus,
+.form-field input[type="number"]:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--brand) 20%, transparent);
+}

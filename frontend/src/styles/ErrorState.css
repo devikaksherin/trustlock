@@ -1,0 +1,26 @@
+.error-state {
+  background: color-mix(in srgb, var(--block) 5%, transparent);
+  border: 1px solid var(--block);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+
+.error-title {
+  color: var(--block-text);
+  font-size: 18px;
+  margin-bottom: var(--space-2);
+}
+
+.error-message {
+  color: var(--ink);
+  margin-bottom: var(--space-4);
+}
+
+.error-state .btn-secondary {
+  border-color: var(--block);
+  color: var(--block-text);
+}
+
+.error-state .btn-secondary:hover {
+  background: color-mix(in srgb, var(--block) 10%, transparent);
+}
